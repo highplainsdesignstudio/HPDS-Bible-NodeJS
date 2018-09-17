@@ -1,0 +1,29 @@
+
+doctype html
+head
+    title Login Page
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous")
+
+body(class = 'container')
+    h1 Login Page
+    if errors != null
+        each error in errors
+            p #{error.msg}
+    form(method = 'post', action = '/login')
+        div(class = 'form-group')
+            input(class = 'form-control', id = "username" name = 'username' type = "text", placeholder = "User Name")
+        div(class = 'form-group')
+            input(class = 'form-control', id = "password" name = 'password' type = 'password', placeholder = 'Password')
+        div(class = 'form-group')
+            input(class = 'form-control btn btn-primary' type = 'submit' value = 'Log In')   
+    a(href = '/createAccount') 
+                button(class = 'form-control btn btn-info') Create Account
+
+    script.
+        console.log("This is the script.")
+        function submit() {
+            var userName = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            console.log(userName);
+            console.log(password);
+        }
