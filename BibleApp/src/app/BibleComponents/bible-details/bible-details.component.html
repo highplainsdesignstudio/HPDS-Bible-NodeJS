@@ -43,11 +43,20 @@
 <div *ngIf="page != null" class="container">
   <div class="row">
     <button class="col-1" (click)="previousChapter()"><</button>
-    <section class="col-10">
+
+    <article class="col-10">
         <ng-container *ngFor="let verse of verses">
-            <p appHover>{{verse}}: {{page[verse]}}</p>
+            <!-- <p appHover>{{verse}}: {{page[verse]}}</p> -->
+            <!-- The above line was removed and replaced with the following 
+                 code. This was to correct the King James Version which contained
+                 html tags. The tags were displaying as text using the above code,
+                 whereas, the code below actually renders the tags as HTML. This will
+                 allow for HTML tags to be inserted into future versions of the bible.
+            -->
+            <p appHover><span [innerHTML]="verse"></span>: <span [innerHTML]="page[verse]"></span></p>
         </ng-container>
-    </section>
+    </article>
+    
     <button class="col-1" (click)="nextChapter()">></button>
   </div>
   

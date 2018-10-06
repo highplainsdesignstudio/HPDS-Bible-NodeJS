@@ -27,6 +27,7 @@ export class BibleDetailsComponent implements OnInit {
   versions = null;
 
   ngOnInit() {
+    // Upon initialization, getDetails() gets bible details to populate the bible text.
     this.getbibleService.getDetails()
       .subscribe(resp => {
         this.bibleBooks = resp['books'];

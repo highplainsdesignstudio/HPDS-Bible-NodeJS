@@ -9,7 +9,9 @@ router.get('/:version/:book/:chapter', Bible.getBible, function(req, res, next) 
   res.send({bible: res.locals.bibleJSON, chapterCount: res.locals.chapterCount});
 });
 
-/* GET versions, */
+/* GET details. Returns the versions of Bibles available, the book names of the bible,
+ * and the chapter count of each book.
+ */
 router.get('/getDetails', [Bible.getVersions, Bible.getBooks, Bible.getChapterCount], function(req, res, next) {
   var versions = res.locals.versions;
   var books = res.locals.books;
