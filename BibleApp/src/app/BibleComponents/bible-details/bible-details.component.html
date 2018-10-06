@@ -42,22 +42,26 @@
 
 <div *ngIf="page != null" class="container">
   <div class="row">
-    <button class="col-1" (click)="previousChapter()"><</button>
+    <button class="col-1" (click)="previousChapter()">
+      <i class="arrow fas fa-chevron-left fa-5x"></i>
+    </button>
 
     <article class="col-10">
-        <ng-container *ngFor="let verse of verses">
-            <!-- <p appHover>{{verse}}: {{page[verse]}}</p> -->
-            <!-- The above line was removed and replaced with the following 
-                 code. This was to correct the King James Version which contained
-                 html tags. The tags were displaying as text using the above code,
-                 whereas, the code below actually renders the tags as HTML. This will
-                 allow for HTML tags to be inserted into future versions of the bible.
-            -->
-            <p appHover><span [innerHTML]="verse"></span>: <span [innerHTML]="page[verse]"></span></p>
-        </ng-container>
+      <ng-container *ngFor="let verse of verses">
+        <!-- <p appHover>{{verse}}: {{page[verse]}}</p> -->
+        <!-- The above line was removed and replaced with the following 
+              code. This was to correct the King James Version which contained
+              html tags. The tags were displaying as text using the above code,
+              whereas, the code below actually renders the tags as HTML. This will
+              allow for HTML tags to be inserted into future versions of the bible.
+        -->
+        <p appHover><span [innerHTML]="verse"></span>: <span [innerHTML]="page[verse]"></span></p>
+      </ng-container>
     </article>
     
-    <button class="col-1" (click)="nextChapter()">></button>
+    <button class="col-1" (click)="nextChapter()">
+      <i class="arrow fas fa-chevron-right fa-5x"></i>
+    </button>
   </div>
   
 </div>

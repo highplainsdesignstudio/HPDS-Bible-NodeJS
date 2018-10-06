@@ -5,8 +5,7 @@ import { GetbibleService } from '../getbible.service';
   selector: 'app-bible-details',
   templateUrl: './bible-details.component.html',
   styleUrls: [
-    './bible-details.component.css',
-    '../../../../bower_components/bootstrap/dist/css/bootstrap.css' ]
+    './bible-details.component.css' ]
 })
 export class BibleDetailsComponent implements OnInit {
 

@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "bower_components/bootstrap/dist/css/bootstrap.css",
+              "bower_components/Font-Awesome/web-fonts-with-css/css/fontawesome-all.css"
             ],
             "scripts": []
           },
