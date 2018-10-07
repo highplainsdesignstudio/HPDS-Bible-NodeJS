@@ -7,7 +7,7 @@ button {
     max-height: 600px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 30%;
+    top: 2.5rem;
 }
 
 #selections {

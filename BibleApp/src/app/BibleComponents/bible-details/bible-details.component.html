@@ -15,7 +15,7 @@
       </select>
     </div>
       
-    <div class="selection-div col-4" *ngIf="bibleBooks['Old Testament'] != null && bibleBooks['New Testament'] != null">
+    <div class="selection-div col-2" *ngIf="bibleBooks['Old Testament'] != null && bibleBooks['New Testament'] != null">
       <select class="form-control" name="bible-book-select" id="bible-book-select" (input)="chooseBook($event)">
         <optgroup label="Old Testament">
           <option *ngFor="let book of bibleBooks['Old Testament']" value="{{book}}">{{book}}</option>
@@ -27,7 +27,7 @@
       </select>
     </div>
       
-    <div class="selection-div col-4" *ngIf="currentBookChapterCount">
+    <div class="selection-div col-1" *ngIf="currentBookChapterCount">
       <select class="form-control" name="book-chapter-select" id="book-chapter-select" (input)="chooseChapter($event)">
         <ng-container *ngFor="let chapter of currentBookChapterCount">  
           <option *ngIf="chapter === currentChapter; else elseBlock" selected value="{{chapter}}">{{chapter}}</option>
@@ -36,6 +36,13 @@
           </ng-template>
         </ng-container>
       </select>
+    </div>
+
+    <div class="input-group col-5">
+      <div class="input-group-prepend">
+          <i class="fas fa-search input-group-text"></i>
+      </div>
+      <input type="text" class="form-control">
     </div>
   </div>
 </section>
