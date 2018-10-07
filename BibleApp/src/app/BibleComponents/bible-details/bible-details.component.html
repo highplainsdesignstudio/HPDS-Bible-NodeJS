@@ -1,3 +1,12 @@
+<section class="container">
+    <div class="row">
+      <h2 class="col-12 col-sm-6">{{currentVersion}}</h2>
+      <h2 class="col-8 col-sm-4">{{currentBook}}:</h2>
+      <h2 class="col-4 col-sm-2">{{currentChapter}}</h2>
+    </div>
+  </section>
+
+
 <section id="selections" class="container">
   <div class="row form-group">
     <div class="selection-div col-4" *ngIf="versions != null">
@@ -31,22 +40,14 @@
   </div>
 </section>
 
-<section class="container">
-  <div class="row">
-    <h2 class="col-6">{{currentVersion}}</h2>
-    <h2 class="col-4">{{currentBook}}:</h2>
-    <h2 class="col-2">{{currentChapter}}</h2>
-  </div>
-</section>
-
 
 <div *ngIf="page != null" class="container">
   <div class="row">
-    <button class="col-1" (click)="previousChapter()">
-      <i class="arrow fas fa-chevron-left fa-5x"></i>
+    <button class="col-2 col-md-1" (click)="previousChapter()">
+      <i class="arrow fas fa-chevron-left"></i>
     </button>
 
-    <article class="col-10">
+    <article class="col-8 col-md-10">
       <ng-container *ngFor="let verse of verses">
         <!-- <p appHover>{{verse}}: {{page[verse]}}</p> -->
         <!-- The above line was removed and replaced with the following 
@@ -59,8 +60,8 @@
       </ng-container>
     </article>
     
-    <button class="col-1" (click)="nextChapter()">
-      <i class="arrow fas fa-chevron-right fa-5x"></i>
+    <button class="col-2 col-md-1" (click)="nextChapter()">
+      <i class="arrow fas fa-chevron-right"></i>
     </button>
   </div>
   

@@ -4,9 +4,16 @@ p {
 
 
 button {
-    max-height: 500px;
+    max-height: 600px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    /* position: fixed; */
     top: 30%;
+}
+
+#selections {
+    background-color: white;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0%;
+    z-index: 100;
 }
